@@ -12,7 +12,7 @@ function App() {
       <Routes>
         {/* Home layout wraps all pages */}
         <Route path="/" element={<Home />}>
-          <Route index element={<HomeContent />} />   {/* ✅ Full component */}
+          <Route index element={<HomeContent />} />  
           <Route path="about" element={<About />} />
           <Route path="signIn" element={<SignIn />} />
           <Route path="signUp" element={<SignUp />} />

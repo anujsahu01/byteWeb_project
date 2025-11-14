@@ -14,7 +14,7 @@ export default function Header() {
                     </div>
                     <span className="text-lg font-semibold tracking-tight text-slate-800">
                         <Link
-                            to="/">AppName</Link>
+                            to="/">ByteWeb</Link>
 
                     </span>
                 </div>
