@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import SignIn from "../src/pages/SignIn";
+import HomeContent from "./pages/HomeContent";
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
       <Routes>
         {/* Home layout wraps all pages */}
         <Route path="/" element={<Home />}>
-          <Route index element={<div>Welcome to the Home Page!</div>} />
+          <Route index element={<HomeContent />} />   {/* ✅ Full component */}
           <Route path="about" element={<About />} />
-          <Route path="signin" element={<SignIn />} />
+          <Route path="signIn" element={<SignIn />} />
         </Route>
       </Routes>
     </Router>
