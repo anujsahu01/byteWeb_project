@@ -7,7 +7,7 @@ const LanguageSelector = () => (
       className="w-5 h-3.5 object-cover rounded-[2px]"
     />
     <span className="text-sm font-medium text-gray-600">EN</span>
-    <ChevronDown size={14} className="text-gray-400" />
+    {/* <ChevronDown size={14} className="text-gray-400" /> */}
   </button>
 );
 

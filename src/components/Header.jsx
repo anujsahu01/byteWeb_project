@@ -20,17 +20,7 @@ export default function Header() {
                 </div>
 
                 {/* Navigation */}
-                <nav className="hidden gap-6 text-sm text-slate-600 md:flex">
-                    <a href="#features" className="hover:text-purple-600 transition-colors">
-                        Features
-                    </a>
-                    <a href="#how-it-works" className="hover:text-purple-600 transition-colors">
-                        How it works
-                    </a>
-                    <a href="#contact" className="hover:text-purple-600 transition-colors">
-                        Contact
-                    </a>
-                </nav>
+             
 
                 {/* Buttons */}
                 <div className="flex items-center gap-3">
@@ -41,13 +31,7 @@ export default function Header() {
                         Login
                     </Link>
 
-                    <Link
-                        to="/about"
-                        className="hidden sm:inline-block rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-500 to-indigo-500 
-              px-4 py-2 text-sm font-medium text-white shadow-md hover:opacity-90 transition"
-                    >
-                        Learn more
-                    </Link>
+                    
                 </div>
 
             </div>

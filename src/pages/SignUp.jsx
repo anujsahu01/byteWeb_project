@@ -3,10 +3,11 @@ import Input from "../components/Input";
 import Button from "../components/Button";
 import Checkbox from "../components/Checkbox";
 import SocialButton from "../components/SocialButton";
+// import LanguageSelector from "../components/LanguageSelector";
 import LanguageSelector from "../components/LanguageSelector";
 import GoogleIcon from "../components/GoogleIcon";
 import { User, Mail, Lock, Instagram, Facebook, Twitter } from "lucide-react";
-
+import { Link } from "react-router-dom";
 
 const SignUp = ({ onSwitchPage }) => {
   const [name, setName] = useState("");
@@ -167,7 +168,9 @@ const SignUp = ({ onSwitchPage }) => {
               onClick={(e) => { e.preventDefault(); onSwitchPage('signin'); }}
               className="text-[#4F46E5] font-semibold hover:underline"
             >
-              SIGN IN
+             <Link to="/signIn">
+                SIGN IN
+              </Link>
             </a>
           </p>
         </div>
@@ -175,3 +178,5 @@ const SignUp = ({ onSwitchPage }) => {
     </div>
   );
 };
+
+export default SignUp;

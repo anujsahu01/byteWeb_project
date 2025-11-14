@@ -6,7 +6,9 @@ import Button from "../components/Button";
 // import LanguageSelector from "../components/LanguageSelector";
 // import SignInIllustration from "../components/SignInIllustration";
 // import GoogleIcon from "../components/GoogleIcon";
+import login from "../assets/image/login.png";
 import { Mail, Lock, Instagram, Facebook, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SignIn = ({ onSwitchPage }) => {
   const [email, setEmail] = useState('');
@@ -20,105 +22,86 @@ const SignIn = ({ onSwitchPage }) => {
   }, [email, password, rememberMe]);
 
   return (
-    <div 
-      className="min-h-screen w-full bg-gradient-to-br from-[#E0E7FF] via-[#F3E8FF] to-[#FCE7F3] flex items-center justify-center p-4"
-      style={{ fontFamily: 'Inter, sans-serif' }}
-    >
-      <div className="w-full max-w-6xl flex flex-col lg:flex-row items-stretch bg-white/70 shadow-2xl rounded-2xl overflow-hidden min-h-[600px] border border-white/50 backdrop-blur-md">
+    <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-tr from-[#2b6ef2] via-[#c5288f] to-[#ff6a3d]">
+      <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row bg-white/10 rounded-3xl backdrop-blur-xl overflow-hidden shadow-2xl">
 
-        {/* LEFT PANEL */}
-        <div 
-          className="w-full lg:w-5/12 relative flex items-center justify-center p-8 sm:p-12 lg:p-6 min-h-[300px]" 
-          style={{
-            background: 'linear-gradient(135deg, #FF0077 0%, #8000FF 100%)',
-            clipPath: 'polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%)',
-            zIndex: 10,
-          }}
-        >
-          {/* <SignInIllustration /> */}
+        {/* LEFT SIDE */}
+        <div className="w-full lg:w-1/2 p-10 md:p-14 text-white flex flex-col justify-center items-center">
+
+
+          <img
+            src={login}
+            alt="login illustration"
+            className="w-110 h-100%"
+          />
+
         </div>
 
-        {/* RIGHT PANEL */}
-        <div className="w-full lg:w-7/12 flex flex-col justify-center p-8 sm:p-12 lg:p-16 relative z-0">
-          {/* <div className="flex justify-end mb-8 absolute top-8 right-8">
-            <LanguageSelector />
-          </div> */}
+        {/* RIGHT SIDE */}
+        <div className="w-full lg:w-1/2 bg-white p-10 lg:p-14 flex flex-col justify-center">
+          <h2 className="text-3xl font-bold text-blue-600 mb-3">SIGN IN</h2>
+          <p className="text-gray-600 mb-8">
+            Enter your email and password to login
+          </p>
 
-          <div className="max-w-[380px] w-full mx-auto">
-            <h2 className="text-[32px] font-bold text-[#4F46E5] text-center mt-12 lg:mt-0">SIGN IN</h2>
-            <p className="text-[14px] text-center text-gray-500 mb-8">
-              Enter your email and password to login
-            </p>
-
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                <Input
-                  type="email"
-                  placeholder="Enter email"
-                  icon={Mail}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
-                <Input
-                  type="password"
-                  placeholder="Enter password"
-                  icon={Lock}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <div className="flex justify-end mt-2">
-                    <a href="#" className="text-xs text-gray-500 hover:text-[#4F46E5] hover:underline">
-                        Forgot Password?
-                    </a>
-                </div>
-              </div>
-
-              {/* <div className="flex justify-between items-center">
-                <Checkbox
-                  label="Remember me"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                />
-              </div> */}
-
-              <div className="pt-3">
-                <Button type="submit">SIGN IN</Button>
-              </div>
-            </form>
-
-            <div className="my-8 flex items-center">
-              <div className="flex-grow border-t border-gray-300"></div>
-              <span className="mx-3 text-gray-400 text-sm">OR</span>
-              <div className="flex-grow border-t border-gray-300"></div>
+          <div className="flex flex-col space-y-6">
+            {/* Email */}
+            <div>
+              <label className="text-sm text-gray-700">Email</label>
+              <input
+                type="email"
+                placeholder="Enter Email"
+                className="w-full mt-1 px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              />
             </div>
 
-            {/* <div className="flex justify-center gap-5">
-              <SocialButton icon={Instagram} ariaLabel="Instagram" className="text-[#E1306C] hover:shadow-[0_0_15px_rgba(255,0,122,0.6)]"/>
-              <SocialButton icon={Facebook} ariaLabel="Facebook" className="text-[#1877F2] hover:shadow-[0_0_15px_rgba(0,115,255,0.6)]"/>
-              <SocialButton icon={Twitter} ariaLabel="Twitter" className="text-[#1DA1F2] hover:shadow-[0_0_15px_rgba(29,161,242,0.7)]"/>
-              <SocialButton svgIcon={GoogleIcon} ariaLabel="Google" className="hover:shadow-[0_0_15px_rgba(255,60,0,0.6)]"/>
-            </div> */}
+            {/* Password */}
+            <div>
+              <label className="text-sm text-gray-700">Password</label>
+              <input
+                type="password"
+                placeholder="Enter Password"
+                className="w-full mt-1 px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              />
+            </div>
 
-            <p className="mt-8 text-center text-sm text-gray-600">
-              Don't have an account?{" "}
-              <a 
-                href="#" 
-                onClick={(e) => { e.preventDefault(); onSwitchPage('signup'); }} 
-                className="text-[#4F46E5] font-semibold hover:underline"
-              >
-                SIGN UP
-              </a>
-            </p>
+            {/* Newsletter */}
+            <label className="flex items-center space-x-2 text-sm">
+              <input type="checkbox" className="w-4 h-4" />
+              <span>Subscribe to weekly newsletter</span>
+            </label>
 
-            <p className="mt-6 text-center text-xs text-gray-400">
-              © 2023. VRISTO All Rights Reserved.
-            </p>
+            {/* Sign In Button */}
+            <button className="w-full py-3 rounded-md bg-gradient-to-r from-pink-500 to-blue-600 text-white font-semibold text-lg shadow-md hover:opacity-90 transition">
+              SIGN IN
+            </button>
+
+            {/* OR */}
+            <div className="flex items-center justify-center text-gray-400">
+              <span className="border-t w-1/4"></span>
+              <span className="px-4">OR</span>
+              <span className="border-t w-1/4"></span>
+            </div>
+            {/* Social Icons */}
+            <div className="flex items-center justify-center space-x-6 mt-2 text-xl text-gray-600">
+              <i className="fa-brands fa-instagram cursor-pointer hover:text-pink-500"></i>
+              <i className="fa-brands fa-facebook cursor-pointer hover:text-blue-600"></i>
+              <i className="fa-brands fa-twitter cursor-pointer hover:text-blue-400"></i>
+              <i className="fa-brands fa-google cursor-pointer hover:text-red-500"></i>
+            </div>
           </div>
+
+          <p className="text-sm text-center text-gray-600 mt-8">
+            Don't have an account ? <span className="text-blue-600 cursor-pointer hover:underline">
+              <Link to="/signUp">
+                SIGN UP
+              </Link>
+            </span>
+          </p>
+
+          <p className="text-xs text-center text-gray-400 mt-10">
+            © 2023. VRISTO All Rights Reserved.
+          </p>
         </div>
       </div>
     </div>
