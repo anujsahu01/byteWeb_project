@@ -20,19 +20,15 @@ export default function Header() {
                 </div>
 
                 {/* Navigation */}
-             
 
-                {/* Buttons */}
-                <div className="flex items-center gap-3">
-                    <Link
-                        to="/signIn"
-                        className="text-md text-purple-700 hover:text-purple-800 transition-colors"
-                    >
-                        Login
-                    </Link>
 
-                    
-                </div>
+                <Link
+                    to="/signIn"
+                    className="text-lg text-purple-700 hover:text-purple-800 transition-colors"
+                >
+                    Login
+                </Link>
+
 
             </div>
         </header>
