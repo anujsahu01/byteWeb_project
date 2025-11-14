@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import login from "../assets/image/login.png";
+import GoogleIcon from "../components/GoogleIcon";
 import { Mail, Lock, Instagram, Facebook, Twitter } from "lucide-react";
 
 const SignIn = ({ onSwitchPage }) => {
@@ -27,7 +28,7 @@ const SignIn = ({ onSwitchPage }) => {
           {/* Actual card */}
           <div className="flex flex-col lg:flex-row bg-white rounded-[32px] overflow-hidden">
             {/* LEFT SIDE – gradient + image */}
-            <div className="w-full lg:w-1/2 bg-gradient-to-br from-[#2b6ef2] via-[#c5288f] to-[#f9735b] flex items-center justify-center p-10 lg:p-12">
+            <div className="w-full lg:w-1/2 bg-gradient-to-br via-[#c5288f]  from-[#2b6ef2] to-[#f9735b] flex items-center justify-center p-10 lg:p-12">
             {/* <div className="w-full lg:w-1/2 bg-gradient-to-br flex items-center justify-center p-10 lg:p-12"> */}
               <img
                 src={login}
@@ -111,27 +112,53 @@ const SignIn = ({ onSwitchPage }) => {
                 </div>
 
                 {/* Social icons (optional, like original design) */}
-                <div className="flex items-center justify-center gap-6 text-gray-500 mt-1">
-                  <Instagram className="w-5 h-5 cursor-pointer hover:text-pink-500" />
-                  <Facebook className="w-5 h-5 cursor-pointer hover:text-blue-600" />
-                  <Twitter className="w-5 h-5 cursor-pointer hover:text-sky-500" />
-                </div>
+                <div className="flex items-center justify-center gap-6 mt-1">
+
+  {/* Instagram */}
+  <div className="w-10 h-10 flex items-center justify-center rounded-full 
+      bg-gradient-to-br from-[#ff2e72] via-[#c433ff] to-[#4364f7] 
+      text-white cursor-pointer hover:opacity-90 transition">
+    <Instagram size={18} />
+  </div>
+
+  {/* Facebook */}
+  <div className="w-10 h-10 flex items-center justify-center rounded-full 
+      bg-gradient-to-br from-[#ff2e72] via-[#c433ff] to-[#4364f7] 
+      text-white cursor-pointer hover:opacity-90 transition">
+    <Facebook size={18} />
+  </div>
+
+  {/* Twitter */}
+  <div className="w-10 h-10 flex items-center justify-center rounded-full 
+      bg-gradient-to-br from-[#ff2e72] via-[#c433ff] to-[#4364f7] 
+      text-white cursor-pointer hover:opacity-90 transition">
+    <Twitter size={18} />
+  </div>
+
+  {/* Google */}
+  <div className="w-10 h-10 flex items-center justify-center rounded-full 
+      bg-gradient-to-br from-[#ff2e72] via-[#c433ff] to-[#4364f7] 
+      text-white cursor-pointer hover:opacity-90 transition">
+    <GoogleIcon size={18} />
+  </div>
+
+</div>
               </form>
 
               {/* Footer text */}
-              <p className="text-[11px] text-center text-gray-500 mt-8">
+              <p className="text-[13px] text-center text-gray-500 mt-8">
                 Don&apos;t have an account ?{" "}
                 <button
                   type="button"
                   onClick={() => onSwitchPage && onSwitchPage("signup")}
                   className="text-[#1D4ED8] font-medium hover:underline"
                 >
-                  SIGN UP
+                   <Link to="Signup"> SIGN UP</Link>
                 </button>
               </p>
 
               <p className="text-[10px] text-center text-gray-400 mt-6">
-                © 2023. VRISTO All Rights Reserved.
+                © 2025. VRISTO All Rights Reserved.
               </p>
             </div>
           </div>
@@ -142,3 +169,5 @@ const SignIn = ({ onSwitchPage }) => {
 };
 
 export default SignIn;
+
+// size to thk h but small jaise lg rhe bjh se

@@ -26,7 +26,7 @@ export default function Header() {
                 <div className="flex items-center gap-3">
                     <Link
                         to="/signIn"
-                        className="text-sm text-purple-600 hover:text-purple-700 transition-colors"
+                        className="text-md text-purple-700 hover:text-purple-800 transition-colors"
                     >
                         Login
                     </Link>
