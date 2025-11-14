@@ -1,16 +1,52 @@
-# React + Vite
+# 🚀 React Authentication UI — Login & Signup (Assignment Task)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a fully responsive **Login & Signup Authentication UI** built using **React.js** and **Tailwind CSS**.  
+It was created as part of a **company assignment task**, focusing on modern UI, animations, clean design, reusable components, and proper routing.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
+👉 **Deployed on Vercel:** https://your-vercel-project-url.vercel.app/  
+(Replace with your live link)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Features
 
-## Expanding the ESLint configuration
+### ✅ Login Page  
+- Email + Password fields  
+- Newsletter checkbox  
+- Gradient UI  
+- Social Login Buttons (UI only)  
+- Proper form validation  
+- Toast notifications  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✅ Signup Page  
+- Full Name, Email, Password, Confirm Password  
+- Auto form reset after successful submit  
+- Error validation with Toast  
+- Modern Glassmorphism UI  
+
+### 🎨 UI Highlights  
+- Pixel-perfect responsive design  
+- Gradient backgrounds  
+- Tailwind CSS utility classes  
+- Custom components (Input, Button, SocialButton, LanguageSelector)  
+- Smooth hover animations  
+
+---
+
+## 🛠 Technologies Used
+
+| Technology | Purpose |
+|-----------|----------|
+| **React.js** | Frontend Framework |
+| **React Router DOM** | Page Routing |
+| **Tailwind CSS** | Styling |
+| **Lucide Icons** | Icons |
+| **React-Toastify** | Beautiful toast alerts |
+| **Vite** | Fast development environment |
+
+---
+
+deploy -- https://byteweb.vercel.app/
