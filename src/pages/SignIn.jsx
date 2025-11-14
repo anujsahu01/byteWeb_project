@@ -17,15 +17,18 @@ const SignIn = ({ onSwitchPage }) => {
   );
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-[#f5487f] via-[#c433ff] to-[#4364f7]">
+    // <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-[#f5487f] via-[#c433ff] to-[#4364f7]">
+    <div className="min-h-screen flex items-center justify-center">
       {/* Outer padding so card doesn’t touch edges */}
       <div className="w-full max-w-6xl px-4">
         {/* Gradient border around card */}
-        <div className="rounded-[34px] bg-gradient-to-r from-[#f5487f] via-[#c433ff] to-[#4364f7] p-[2px] shadow-[0_24px_60px_rgba(15,23,42,0.45)]">
+        {/* <div className="rounded-[34px] bg-gradient-to-r from-[#f5487f] via-[#c433ff] to-[#4364f7] p-[2px] shadow-[0_24px_60px_rgba(15,23,42,0.45)]"> */}
+        <div className="rounded-[34px] bg-gradient-to-r p-[2px] shadow-[0_24px_60px_rgba(15,23,42,0.45)]">
           {/* Actual card */}
           <div className="flex flex-col lg:flex-row bg-white rounded-[32px] overflow-hidden">
             {/* LEFT SIDE – gradient + image */}
             <div className="w-full lg:w-1/2 bg-gradient-to-br from-[#2b6ef2] via-[#c5288f] to-[#f9735b] flex items-center justify-center p-10 lg:p-12">
+            {/* <div className="w-full lg:w-1/2 bg-gradient-to-br flex items-center justify-center p-10 lg:p-12"> */}
               <img
                 src={login}
                 alt="Sign in illustration"
